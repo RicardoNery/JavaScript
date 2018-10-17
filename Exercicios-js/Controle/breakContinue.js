@@ -14,3 +14,8 @@ for (i in nums){
     }
     console.log(`${i} = ${nums[i]}`);
 }
+
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}
