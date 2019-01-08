@@ -167,7 +167,7 @@ function MakeDraw() {
 		}
 		if (this.enumerateV) {
 			for (var i = 0; i < this.horizontalNR - 1; i++) {
-				var nrSpacing = totalRange / (this.horizontalNR - 2);
+				var nrSpacing = totalRange / (this.horizontalNR - 1);
 				ctx.fillText(Math.round((range[1] - i * nrSpacing) * this.dataTrimmer) / this.dataTrimmer, 1, (i + 1) * spacVertic - this.fSize * 0.5);
 			}
 		}
@@ -181,25 +181,27 @@ function MakeDraw() {
 	}
 	//////// 
 	this.data;
-	this.horizontalNR = 10;
-	this.fSize = 10;
-	this.lineWidthP = 2;
-	this.lineWidthG = 1;
-	this.dataTrimmer;
-	this.adjustTrimmer = 0;
+	this.horizontalNR = 6;
+	
+	this.fSize	= 9;	    /// tamanho da fonte
+	this.lineWidthP = 0.5;
+	this.lineWidthG = 0.1;  /// Linhas verticais 
+	this.dataTrimmer = 10; 
+	this.adjustTrimmer = 0; /// label com valores no grafico
 	this.textColor = 'rgba(100,100,100,1)';
 	this.plotColor = 'rgba(200,100,100,1)';
-	this.gridColor = 'rgba(0,0,0,0.1)';
+	this.gridColor = 'rgba(0,0,0,1)';
 	this.bgColor = 'rgba(255,255,255,1)';
-	this.enumerateV = 1;
-	this.enumerateH = 1;
-	this.enumerateP = 1;
+	this.enumerateV = 1; /// Eixo y
+	this.enumerateH = 1; /// Eixo x
+	this.enumerateP = 1; /// label com valores no grafico
 	this.offsetL = 0;
 	this.offsetR = 0;
-	this.id;
-	this.height;
-	this.width;
+	this.id = 0;
+	this.height = 0;
+	this.width = 0;
 	var ctx;
+	
 	////////////////////// 
 	this.plot = function () {
 		//////

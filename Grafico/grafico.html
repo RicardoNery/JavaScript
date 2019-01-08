@@ -3,7 +3,7 @@
 <head>
 
 <body>
-    <canvas width="650" height="400" id="canv"></canvas>
+    <canvas width="1024" height="400" id="canv"></canvas>
     <script src="../Grafico/plot.js"></script>
     <script>
 
@@ -20,7 +20,7 @@
         function prepData(range, amount) {
             var arr = new Array(amount);
             for (var i = 0; i < amount; i++) {
-                arr[i] = (Math.random() - 0.5) * range;
+                arr[i] = (Math.random() - 1) * range;
             }
             return arr;
         }
@@ -29,19 +29,20 @@
         var myp = new MakeDraw();
         myp.id = "canv";
 
-        myp.plotColor = 'rgba(200,20,53,1)';
-        myp.gridColor = 'rgba(0.0,0,0.05)';
+        // myp.plotColor = 'rgba(200,20,53,1)';
+        // myp.gridColor = 'rgba(0.0,0,0.05)';
 
-        myp.fSiz = 15;
-        myp.enumerateP = 0;
-        myp.enumerateH = 0;
-        myp.enumerateV = 1;
+        // myp.fSiz = 15;
+        // myp.enumerateP = 0;
+        // myp.enumerateH = 0;
+        // myp.enumerateV = 1;
 
-        var data = prepData(10, ilosc);
+
+        var data = prepData(5, ilosc);
         // myp.data = data;
         // myp.plot();
 
-        var t = setInterval('recalc()', 20);
+        var t = setInterval('recalc()', 120);
 
 
     </script>
