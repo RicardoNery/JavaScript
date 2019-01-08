@@ -1,0 +1,53 @@
+<html>
+
+<head>
+
+<body>
+    <canvas width="1024" height="400" id="canv"></canvas>
+    <script src="../Grafico/plot.js"></script>
+    <script>
+
+        function recalc() {
+
+            for (var i = 1; i < ilosc; i++) {
+                data[i - 1] = data[i];
+            }
+            data[ilosc - 1] = data[ilosc - 2] + Math.random() * 1 - 0.5;
+            myp.data = data;
+            myp.plot();
+        }
+
+        function prepData(range, amount) {
+            var arr = new Array(amount);
+            for (var i = 0; i < amount; i++) {
+                arr[i] = (Math.random() - 1) * range;
+            }
+            return arr;
+        }
+
+        var ilosc = 200;
+        var myp = new MakeDraw();
+        myp.id = "canv";
+
+        // myp.plotColor = 'rgba(200,20,53,1)';
+        // myp.gridColor = 'rgba(0.0,0,0.05)';
+
+        // myp.fSiz = 15;
+        // myp.enumerateP = 0;
+        // myp.enumerateH = 0;
+        // myp.enumerateV = 1;
+
+
+        var data = prepData(5, ilosc);
+        // myp.data = data;
+        // myp.plot();
+
+        var t = setInterval('recalc()', 120);
+
+
+    </script>
+
+</body>
+</head>
+
+</html>
