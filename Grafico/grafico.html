@@ -1,11 +1,12 @@
 <html>
 <head>
-	   <link rel="stylesheet" href="../Stylesheet/style1.css" >
-<H2>Gráfico</h2>	   
+ <link rel="stylesheet" type="text/css" href="../Stylesheet/style1.css" > 
+ <link rel="stylesheet" type="text/css" href="../Stylesheet/style2.css">
+ <title>Gráfico</title>
+ <canvas width="1024" height="400" id="canv"></canvas>
+ <script src="../Grafico/plot.js"></script>
 <body>
 	<div style="background-color:Black"></div>
-    <canvas width="1024" height="400" id="canv"></canvas>
-    <script src="../Grafico/plot.js"></script>
     <script>
         function recalc() {
 
@@ -43,11 +44,26 @@
         // myp.plot();
 
         var t = setInterval('recalc()', 120);
-
-
     </script>
 
+	
+	<table>
+	  <tr>
+	    <th>Nome</th>
+	    <th>Sobrenome</th> 
+	    <th>Idade</th>
+	  </tr>
+	  <tr>
+	    <td>Nome 1</td>
+	    <td>Sobrenome 1</td> 
+	    <td>50</td>
+	  </tr>
+	  <tr>
+	    <td>Nome 2</td>
+	    <td>Sobrenome 2</td> 
+	    <td>94</td>
+	  </tr>
+	</table>    
 </body>
 </head>
-
 </html>
